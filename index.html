@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Dashboard</title>
+  <link href='./style.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <div class="bank-logo">
+      <a href="#">
+        <img src="./img/hbank-logo.svg" alt="bank logo">
+      </a>
+    </div>
+    <div class="user">
+      <img src="./img/avatar.png" alt="user avatar">
+      <p>Ethan Sutcliffe</p>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <!-- Dashboard column -->
+    <div class="dashboard">
+      <div class="section-links">
+        <!-- Dashboard -->
+        <div class="column-header" id="dashbaord">
+          <img src="./img/House.svg">
+          <span>Dashboard</span>
+        </div>
+
+        <!-- Analytics -->
+        <div class="section" id="analytics">
+          <div class="section-header">
+            Analytics
+          </div>
+          <div class="menu">
+            <!-- Performance -->
+            <div class="menu-item" id="performance">
+              <img src="./img/show-chart-1.svg">
+              <a href="#">Performance</a>
+            </div>
+            <!-- Hotjar -->
+            <div class="menu-item" id="hotjar">
+              <img src="./img/Archery.svg">
+              <a href="#">Hotjar</a>
+              <span class="alert dash-alert" id="new">New</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support -->
+        <div class="section" id="support">
+          <div class="section-header">
+            Support
+          </div>
+          <div class="menu">
+            <!-- Tickets -->
+            <div class="menu-item" id="tickets">
+              <img src="./img/ticket.svg">
+              <a href="#">Tickets</a>
+              <span class="alert dash-alert" id="num">18</span>
+            </div>
+            <!-- Agents -->
+            <div class="menu-item" id="agents">
+              <img src="./img/account.svg">
+              <a href="#">Agents</a>
+            </div>
+            <!-- Customers -->
+            <div class="menu-item" id="customers">
+              <img src="./img/users.svg">
+              <a href="#">Customers</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="section" id="shop">
+          <div class="section-header">
+            Shop
+          </div>
+          <div class="menu">
+            <!-- Products -->
+            <div class="menu-item" id="products">
+              <img src="./img/shop.svg">
+              <a href="#">Products</a>
+            </div>
+            <!-- Orders -->
+            <div class="menu-item" id="orders">
+              <img src="./img/basket.svg">
+              <a href="#">Orders</a>
+            </div>
+            <!-- Reports -->
+            <div class="menu-item" id="reports">
+              <img src="./img/chat-info.svg">
+              <a href="#">Reports</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acct-links">
+        <div class="menu">
+          <!-- Settings -->
+          <div class="menu-item" id="settings">
+            <img src="./img/Setting.svg">
+            <a href="#">Settings</a>
+          </div>
+          <!-- Logout -->
+          <div class="menu-item" id="logout">
+            <img src="./img/Logout.svg">
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory details -->
+    <div class="inventory">
+      <div class="cards">
+        <div class="inv-details-1">
+          Inventory Details
+        </div>
+        <!-- Green card -->
+        <div class="card green-card">
+          <div class="card-content green-card-content">
+            <div class="card-left">
+              Your balance:
+              <span>$25,330</span>
+              3 cards
+            </div>
+            <div class="card-right">
+              Details
+              <img src="./img/arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="inv-details-2">
+          Inventory Details
+          <span class="alert" id="num-2">2</span>
+        </div>
+        <div class="phys-cards">
+          <!-- Purple card -->
+          <div class="card purple-card">
+            <div class="card-content-2 purple-card-content">
+              <div class="card-top">
+                <div class="row-1">
+                  Shopping Card
+                  <img src="./img/card-chip-p.svg">
+                </div>
+                <div class="row-2">
+                  <span>Name</span>
+                  Exp 26/6
+                </div>
+              </div>
+              <div class="card-bottom row-3">
+                **** **** 0928
+                <img src="./img/visa.svg">
+              </div>
+            </div>
+          </div>
+          <!-- Orange card -->
+          <div class="card orange-card">
+            <div class="card-content-2 orange-card-content">
+              <div class="card-top">
+                <div class="row-1">
+                  Shopping Card
+                  <img src="./img/card-chip-o.svg">
+                </div>
+                <div class="row-2">
+                  <span>Name</span>
+                  Exp 26/6
+                </div>
+              </div>
+              <div class="card-bottom row-3">
+                **** **** 4486
+                <img src="./img/visa.svg">
+              </div>
+            </div>
+          </div>
+          <!-- Add card -->
+          <div class="card blank-card">
+            <a href="#">
+              <img src="./img/plus.svg">
+              Add Card
+            </a>
+          </div>
+        </div>
+        <!-- Summary -->
+        <div class="summary">
+          <div class="earnings">
+            <div class="earnings-icon">
+              <img src="./img/show-chart.svg">
+            </div>
+            <div class="earnings-values">
+              <p>Earnings</p>
+              <span>$12,341</span>
+            </div>
+          </div>
+          <div class="spendings">
+            <div class="spendings-icon">
+              <img src="./img/dollar-coin.svg">
+            </div>
+            <div class="spendings-values">
+              <p>Spendings</p>
+              <span>$4,009</span>
+            </div>
+          </div>
+          <div class="goals">
+            <div class="goals-icon">
+              <img src="./img/aim.svg">
+            </div>
+            <div class="goals-values">
+              <p>Goals</p>
+              <span>$8,098</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card details-->
+    <div class="card-section">
+      <div class="single-card">
+        <div class="single-detail">
+          Card details
+        </div>
+        <!-- Card -->
+        <div class="card single-green-card">
+          <div class="card-content-2 single-card-content">
+            <div class="card-top">
+              <div class="row-1">
+                Shopping Card
+                <img src="./img/card-chip-g.svg">
+              </div>
+              <div class="row-2">
+                <span>Name</span>
+                Exp 26/6
+              </div>
+            </div>
+            <div class="card-bottom single-bottom">
+              <span>**** **** 7800</span>
+              <img src="./img/visa.svg">
+            </div>
+          </div>
+        </div>
+        <!-- Card info -->
+        <div class="card-number">
+          <p>Card Number</p>
+          <span>**** 1234 4567 7800</span>
+        </div>
+        <div class="card-info">
+          <div class="expire">
+            <p>Expire Date</p>
+            <span>08/28</span>
+          </div>
+          <div class="cvv">
+            <p>CVV</p>
+            <span>08/28</span>
+          </div>
+          <div class="level">
+            <p>Level</p>
+            <span>02</span>
+          </div>
+        </div>
+        <hr class="line"/>
+        <!-- Limits -->
+        <div class="spending-limits">
+          <span>Spending limits</span>
+          <div class="transaction">
+            <span>Daily transaction limit</span>
+            <div class="bar"></div>
+            <p>$400 spent of $2000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

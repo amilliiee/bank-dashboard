@@ -1,0 +1,672 @@
+/* Add styles here */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --body-text: 1rem;
+    --ccn-text: 1.25rem;
+    --price-text: 1.5rem;
+    --section-text: 0.75rem;
+    --pill-text: 0.625rem;
+
+    --white: #FFFFFF;
+    --background: #262833;
+    --border-and-pill: #43454D;
+    --light-green: #E3ECE6;
+    --green: #73B06F;
+    --section-title: #6C727F;
+    --light-purp: #E4D6F3;
+    --purp: #A686C4;
+    --light-orn: #F5DDC8;
+    --orange: #E9AE79;
+    --off-white: #FFFFFF33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1280px;
+    height: 100vh;
+    background-color: var(--background);
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.01rem;
+    margin: 0 auto;
+}
+
+header {
+    height: 72px;
+    width: 100%;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-and-pill);
+}
+
+.user {
+    width: 148px;
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    font-size: var(--body-text);
+    font-weight: 500;
+    color: var(--white);
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 332px;
+    /* height: calc(100vh - 72px); */
+}
+
+.dashboard {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 500;
+    border-right: 1px solid var(--border-and-pill);
+    grid-column: 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-links {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+}
+
+.section-header {
+    font-size: var(--section-text);
+    text-transform: uppercase;
+    color: var(--section-title)
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white)
+}
+
+.menu-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+}
+
+.alert {
+    position: absolute;
+    right: 0;
+    font-size: var(--pill-text);
+    border: 1px solid;
+    border-radius: 50px;
+    height: 17px;
+    text-align: center;
+}
+
+#new {
+    width: 36px;
+    border-color: var(--purp);
+    background-color: var(--purp);
+}
+
+#num {
+    width: 25px;
+    border-color: var(--border-and-pill);
+    background-color: var(--border-and-pill);
+}
+
+.inventory {
+    max-width: 728px;
+    padding: 24px;
+}
+
+.cards {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px;
+    border: 1px solid var(--border-and-pill);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: var(--body-text);
+    font-weight: bold;
+}
+
+.card {
+    padding: 24px;
+    border-radius: 16px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-left, .card-right {
+    position: relative;
+    z-index: 1;
+    color: var(--background);
+    font-weight: 500;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-left span {
+    font-size: var(--price-text);
+    font-weight: bold;
+}
+
+.card-right {
+    margin-top: 98px;
+    padding: 4px 16px;
+    border: 1px solid var(--light-green);
+    border-radius: 50px;
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+.card-right img {
+    margin-left: 6px;
+}
+
+.green-card-content::before {
+    content: '';
+    background-color: var(--light-green);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid var(--light-green);
+}
+
+.green-card-content::after {
+    content: '';
+    background-color: var(--green);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid var(--green);
+    background-image: url('./img/background-decor.svg');
+    background-size: 100% contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.card-section {
+    border-left: 1px solid var(--border-and-pill);
+}
+
+.inv-details-2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#num-2 {
+    position: relative;
+    width: 22px;
+    border-color: var(--border-and-pill);
+    background-color: var(--border-and-pill);
+}
+
+.phys-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.purple-card, .orange-card, .blank-card {
+    width: 288px;
+    height: 200px;
+    border-radius: 16px;
+}
+
+.purple-card, .orange-card {
+    padding: 24px;
+}
+
+.purple-card-content::before {
+    content: '';
+    background-color: var(--light-purp);
+    width: 100%;
+    height: 63.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--light-purp);
+}
+
+.purple-card-content::after {
+    content: '';
+    background-color: var(--purp);
+    width: 100%;
+    height: 36.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid var(--purp);
+}
+
+.orange-card-content::before {
+    content: '';
+    background-color: var(--light-orn);
+    width: 100%;
+    height: 63.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--light-orn);
+}
+
+.orange-card-content::after {
+    content: '';
+    background-color: var(--orange);
+    width: 100%;
+    height: 36.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid var(--orange);
+}
+
+.card-content-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.card-top, .card-bottom {
+    z-index: 1;
+}
+
+.card-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 500;
+}
+
+.card-bottom {
+    font-size: var(--ccn-text);
+    font-weight: 800;
+}
+
+.card-top span {
+    text-transform: uppercase;
+}
+
+.row-1, .row-2, .row-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-1, .row-3 {
+    color: var(--background);
+}
+
+.row-2 {
+    color: var(--section-title);
+}
+
+.blank-card {
+    border: 1px dashed var(--border-and-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.summary {
+    width: 100%;
+    border: 1px solid var(--border-and-pill);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: auto;
+    flex-wrap: wrap;
+}
+
+.earnings, .spendings, .goals {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 24px;
+}
+
+.earnings-icon, .spendings-icon, .goals-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.earnings-icon {
+    border-color: var(--green);
+    background-color: var(--green);
+}
+
+.spendings-icon {
+    border-color: var(--purp);
+    background-color: var(--purp);
+}
+
+.goals-icon {
+    border-color: var(--orange);
+    background-color: var(--orange);
+}
+
+.earnings-values, .spendings-values, .goals-values {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.earnings p, .spendings p, .goals p {
+    color: var(--section-title);
+    font-weight: 500;
+}
+
+.earnings span, .spendings span, .goals span {
+    font-size: var(--price-text);
+    font-weight: 600;
+}
+
+.card-section {
+    padding: 24px;
+    color: var(--white);
+}
+
+.single-card {
+    border: 1px solid var(--border-and-pill);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-height: 677px;
+}
+
+.single-detail {
+    font-weight: 700;
+}
+
+.single-green-card {
+    height: 288px;
+}
+
+.single-card-content {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    gap: 64px;
+    position: relative;
+}
+
+.single-bottom {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    margin-right: 24px;
+    height: 100%;
+    width: 25px;
+    color: var(--background);
+}
+
+.single-bottom img {
+    transform: rotate(90deg);
+}
+
+.single-green-card::before {
+    content: '';
+    background-color: var(--light-green);
+    width: 63.5%;
+    height: 288px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--light-green);
+    z-index: -1;
+}
+
+.single-green-card::after {
+    content: '';
+    background-color: var(--green);
+    width: 36.5%;
+    height: 288px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.card-number p {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.card-number span {
+    font-size: var(--ccn-text);
+    font-weight: 600;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.expire, .cvv, .level {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.expire, .cvv {
+    padding-right: 12px;
+    border-right: 1px solid var(--border-and-pill);
+}
+
+.cvv, .level {
+    padding-left: 12px;
+}
+
+.expire p, .cvv p, .level p {
+    font-size: var(--section-text);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.expire span, .cvv span, .level span {
+    font-weight: 600;
+}
+
+.line {
+    border-color: var(--border-and-pill);
+    border-top: none;
+}
+
+.spending-limits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.spending-limits span {
+    font-weight: 700;
+}
+
+.transaction {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.transaction span{
+    text-transform: uppercase;
+    font-size: var(--section-text);
+    font-weight: 500;
+}
+
+.transaction p {
+    font-size: var(--body-text);
+    font-weight: 400;
+}
+
+.bar {
+    display: flex;
+}
+
+.bar::before {
+    content: '';
+    width: 100%;
+    height: 8px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+}
+
+.bar::after {
+    content: '';
+    width: 20%;
+    height: 8px;
+    border: 1px solid var(--green);
+    border-radius: 50px;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+/* summary gap goes to 0 at 1024px for rest of design */
+@media (max-width: 1024px) {
+    .inventory {
+        min-width: 472px;
+    }
+
+    .summary {
+        gap: 0;
+    }
+
+    .earnings, .spendings, .goals {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 710px) {
+    .page-layout {
+        grid-template-columns: 44px 1fr;
+        row-gap: 32px;
+    }
+
+    .column-header span, .section-header, .menu-item a, .dash-alert {
+        display: none;
+    }
+
+    .dashboard {
+        padding-left: 12px;
+        padding-right: 12px;
+        grid-row: span 2;
+    }
+
+    .single-green-card {
+        width: 288px;
+        height: 200px;
+        margin: auto;
+    }
+
+    .single-green-card::before {
+        width: 100%;
+        height: 63.5%;
+    }
+
+    .single-green-card::after {
+        width: 100%;
+        height: 36.5%;
+    }
+
+    .single-card-content {
+        writing-mode: horizontal-tb;
+        transform: none;
+        height: 100%;
+    }
+
+    .single-card-content img {
+        transform: rotate(-90deg);
+    }
+
+    .single-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 52px;
+        margin-right: 0;
+        text-wrap: nowrap;
+    }
+
+    .single-bottom img {
+        transform: none;
+    }
+
+    .single-bottom {
+        height: 25px;
+        width: 100%;
+        color: var(--background);
+    }
+
+    .inventory {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 596px;
+        margin-bottom: 86px;
+    }
+
+    .card-section {
+        height: 589px;
+        border-left: none;
+    }
+}
